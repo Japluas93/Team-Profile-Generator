@@ -10,7 +10,61 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-c;
+const EmployeeQuestions = [
+  {
+    type: "input",
+    message: "What is the name of your application?",
+    name: "appName",
+  },
+  {
+    type: "input",
+    message: "Please describe your application",
+    name: "appDescription",
+  },
+  {
+    type: "input",
+    message: "Please explain how to install your application.",
+    name: "appInstall",
+  },
+  {
+    type: "input",
+    message: "Please explain how to use your application.",
+    name: "appUsage",
+  },
+  {
+    type: "list",
+    message:
+      "Please select which type of license you used for this application.",
+    choices: ["MIT", "ISC", "Apache License 2.0", "GNU GPLv3"],
+    name: "appLicense",
+  },
+  {
+    type: "input",
+    message:
+      "Please explain your contribution guidelines for this application.",
+    name: "appContributions",
+  },
+  {
+    type: "input",
+    message: "Please explain how to run tests for your application.",
+    name: "appTests",
+  },
+  {
+    type: "input",
+    message: "Please enter instructions on how you might be contacted.",
+    name: "contactInstructions",
+  },
+  {
+    type: "input",
+    message: "Please enter your Github Username.",
+    name: "githubUsername",
+  },
+  {
+    type: "input",
+    message: "Please enter your e-mail address.",
+    name: "eMail",
+  },
+];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)

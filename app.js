@@ -10,66 +10,32 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-const EmployeeQuestions = [
-  {
-    type: "input",
-    message: "What is the name of your application?",
-    name: "appName",
-  },
-  {
-    type: "input",
-    message: "Please describe your application",
-    name: "appDescription",
-  },
-  {
-    type: "input",
-    message: "Please explain how to install your application.",
-    name: "appInstall",
-  },
-  {
-    type: "input",
-    message: "Please explain how to use your application.",
-    name: "appUsage",
-  },
-  {
-    type: "list",
-    message:
-      "Please select which type of license you used for this application.",
-    choices: ["MIT", "ISC", "Apache License 2.0", "GNU GPLv3"],
-    name: "appLicense",
-  },
-  {
-    type: "input",
-    message:
-      "Please explain your contribution guidelines for this application.",
-    name: "appContributions",
-  },
-  {
-    type: "input",
-    message: "Please explain how to run tests for your application.",
-    name: "appTests",
-  },
-  {
-    type: "input",
-    message: "Please enter instructions on how you might be contacted.",
-    name: "contactInstructions",
-  },
-  {
-    type: "input",
-    message: "Please enter your Github Username.",
-    name: "githubUsername",
-  },
-  {
-    type: "input",
-    message: "Please enter your e-mail address.",
-    name: "eMail",
-  },
-];
+const EmployeeQuestions = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 inquirer.prompt([
   /* Pass your questions in here */
+  {
+    type: "input",
+    name: "id",
+    message: "What is the manager?",
+  },
+  {
+    type: "input",
+    name: "name",
+    message: "What is the employee name?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is the employee email?",
+  },
+  {
+    type: "input",
+    name: "officeNumber",
+    message: "What is the employee office number?",
+  },
 ]);
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will

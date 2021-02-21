@@ -38,13 +38,13 @@ inquirer
       message: "What is the employee office number?",
     },
   ])
-  .then(function (answers) {
-    console.log(answers);
+  .then(function (managerAnswers) {
+    console.log(managerAnswers);
     const manager = new Manager(
-      answers.name,
-      answers.id,
-      answers.email,
-      answers.officeNumber
+      managerAnswers.name,
+      managerAnswers.id,
+      managerAnswers.email,
+      managerAnswers.officeNumber
     );
     employees.push(manager);
     // addNewEmp();

@@ -135,13 +135,13 @@ function addNewEmp() {
     .prompt([
       {
         type: "list",
-        name: "teamChoice",
+        name: "selection",
         message: "Which type of team member would you like to add?",
         choices: ["Manager", "Engineer", "Intern", "Build my team."],
       },
     ])
-    .then((res) => {
-      switch (res.teamChoice) {
+    .then(function (answers) {
+      switch (answers.selection) {
         case "Manager":
           managerPrompt();
           break;
@@ -163,6 +163,8 @@ function addNewEmp() {
 function employeeTeam() {
   return fs.writeFileSync(outputPath, render(employees));
 }
+
+addNewEmp();
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.

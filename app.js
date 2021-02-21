@@ -55,6 +55,42 @@ inquirer
 
 // Engineer Questions
 
+inquirer
+  .prompt([
+    {
+      type: "input",
+      name: "id",
+      message: "What is the employee id?",
+    },
+    {
+      type: "input",
+      name: "name",
+      message: "What is the employee name?",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is the employee email?",
+    },
+    {
+      type: "input",
+      name: "officeNumber",
+      message: "What is the employee's Github account?",
+    },
+  ])
+  .then(function (engineerAnswers) {
+    console.log(engineerAnswers);
+    const engineer = new Engineer(
+      engineerAnswers.name,
+      engineerAnswers.id,
+      engineerAnswers.email,
+      engineerAnswers.officeNumber
+    );
+    employees.push(engineer);
+    // addNewEmp();
+  });
+// function addNewEmp() {}
+
 // Intern Questions
 
 // After the user has input all employees desired, call the `render` function (required

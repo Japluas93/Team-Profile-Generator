@@ -16,43 +16,43 @@ const employees = [];
 // and to create objects for each team member (using the correct classes as blueprints!)
 
 //Manager Questions
-
-inquirer
-  .prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is the employee's name?",
-    },
-    {
-      type: "input",
-      name: "id",
-      message: "What is the employee's id?",
-    },
-    {
-      type: "input",
-      name: "email",
-      message: "What is the employee's email?",
-    },
-    {
-      type: "input",
-      name: "officeNumber",
-      message: "What is the employee's office number?",
-    },
-  ])
-  .then(function (managerAnswers) {
-    console.log(managerAnswers);
-    const manager = new Manager(
-      managerAnswers.name,
-      managerAnswers.id,
-      managerAnswers.email,
-      managerAnswers.officeNumber
-    );
-    employees.push(manager);
-    // addNewEmp();
-  });
-// function addNewEmp() {}
-
+function managerPrompt() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "What is the employee's name?",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "What is the employee's id?",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "What is the employee's email?",
+      },
+      {
+        type: "input",
+        name: "officeNumber",
+        message: "What is the employee's office number?",
+      },
+    ])
+    .then(function (managerAnswers) {
+      console.log(managerAnswers);
+      const manager = new Manager(
+        managerAnswers.name,
+        managerAnswers.id,
+        managerAnswers.email,
+        managerAnswers.officeNumber
+      );
+      employees.push(manager);
+      // addNewEmp();
+    });
+  // function addNewEmp() {}
+}
 // Engineer Questions
 
 inquirer

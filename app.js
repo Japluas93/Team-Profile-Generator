@@ -84,7 +84,7 @@ inquirer
       engineerAnswers.name,
       engineerAnswers.id,
       engineerAnswers.email,
-      engineerAnswers.officeNumber
+      engineerAnswers.github
     );
     employees.push(engineer);
     // addNewEmp();
@@ -92,6 +92,42 @@ inquirer
 // function addNewEmp() {}
 
 // Intern Questions
+
+inquirer
+  .prompt([
+    {
+      type: "input",
+      name: "id",
+      message: "What is the employee id?",
+    },
+    {
+      type: "input",
+      name: "name",
+      message: "What is the employee name?",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is the employee email?",
+    },
+    {
+      type: "input",
+      name: "officeNumber",
+      message: "What school did the intern attend?",
+    },
+  ])
+  .then(function (internAnswers) {
+    console.log(internAnswers);
+    const intern = new Intern(
+      internAnswers.name,
+      internAnswers.id,
+      internAnswers.email,
+      internAnswers.school
+    );
+    employees.push(intern);
+    // addNewEmp();
+  });
+// function addNewEmp() {}
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will

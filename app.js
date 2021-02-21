@@ -49,9 +49,8 @@ function managerPrompt() {
         managerAnswers.officeNumber
       );
       employees.push(manager);
-      // addNewEmp();
+      addNewEmp();
     });
-  // function addNewEmp() {}
 }
 
 // Engineer Questions
@@ -88,9 +87,8 @@ function engineerPrompt() {
         engineerAnswers.github
       );
       employees.push(engineer);
-      // addNewEmp();
+      addNewEmp();
     });
-  // function addNewEmp() {}
 }
 
 // Intern Questions
@@ -127,15 +125,41 @@ function internPrompt() {
         internAnswers.school
       );
       employees.push(intern);
-      // addNewEmp();
+      addNewEmp();
     });
-  // function addNewEmp() {}
+}
+
+function addNewEmp() {
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "teamChoice",
+        message: "Which type of team member would you like to add?",
+        choices: ["Manager", "Engineer", "Intern", "Build my team."],
+      },
+    ])
+    .then((res) => {
+      switch (res.teamChoice) {
+        case "Manager":
+          managerPrompt();
+          break;
+        case "Engineer":
+          engineerPrompt();
+          break;
+        case "Intern":
+          internPrompt();
+          break;
+        default:
+          employeeTeam();
+      }
+    });
 }
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
-function buildEmployeeTeam() {
+function employeeTeam() {
   return fs.writeFileSync(outputPath, render(employees));
 }
 // After you have your html, you're now ready to create an HTML file using the HTML

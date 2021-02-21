@@ -130,7 +130,6 @@ function internPrompt() {
 }
 
 // Adding a new employee
-
 function addNewEmp() {
   inquirer
     .prompt([

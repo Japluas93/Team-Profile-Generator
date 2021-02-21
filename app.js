@@ -22,22 +22,22 @@ inquirer
     {
       type: "input",
       name: "name",
-      message: "What is the employee name?",
+      message: "What is the employee's name?",
     },
     {
       type: "input",
       name: "id",
-      message: "What is the employee id?",
+      message: "What is the employee's id?",
     },
     {
       type: "input",
       name: "email",
-      message: "What is the employee email?",
+      message: "What is the employee's email?",
     },
     {
       type: "input",
       name: "officeNumber",
-      message: "What is the employee office number?",
+      message: "What is the employee's office number?",
     },
   ])
   .then(function (managerAnswers) {
@@ -60,17 +60,17 @@ inquirer
     {
       type: "input",
       name: "name",
-      message: "What is the employee name?",
+      message: "What is the employee's name?",
     },
     {
       type: "input",
       name: "id",
-      message: "What is the employee id?",
+      message: "What is the employee's id?",
     },
     {
       type: "input",
       name: "email",
-      message: "What is the employee email?",
+      message: "What is the employee's email?",
     },
     {
       type: "input",
@@ -98,22 +98,22 @@ inquirer
     {
       type: "input",
       name: "name",
-      message: "What is the employee name?",
+      message: "What is the employee's name?",
     },
     {
       type: "input",
       name: "id",
-      message: "What is the employee id?",
+      message: "What is the employee's id?",
     },
     {
       type: "input",
       name: "email",
-      message: "What is the employee email?",
+      message: "What is the employee's email?",
     },
     {
       type: "input",
       name: "officeNumber",
-      message: "What school did the intern attend?",
+      message: "What school did the employee attend?",
     },
   ])
   .then(function (internAnswers) {

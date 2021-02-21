@@ -14,13 +14,15 @@ const EmployeeQuestions = [];
 const employees = [];
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+
+//Manager Questions
+
 inquirer
   .prompt([
-    /* Pass your questions in here */
     {
       type: "input",
       name: "id",
-      message: "What is the manager?",
+      message: "What is the employee id?",
     },
     {
       type: "input",

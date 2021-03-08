@@ -33,3 +33,5 @@ If you have any questions about this application feel free to reach me at:
 Email: [julianpluas@gmail.com]()
 
 # Walkthrough Video Link
+
+https://drive.google.com/file/d/1Xiq2DEsm-tWUF5BaMLV0OrYDi2IJRU14/view

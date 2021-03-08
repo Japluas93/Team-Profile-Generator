@@ -74,7 +74,7 @@ function engineerPrompt() {
       },
       {
         type: "input",
-        name: "officeNumber",
+        name: "github",
         message: "What is the employee's Github account?",
       },
     ])

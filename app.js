@@ -112,7 +112,7 @@ function internPrompt() {
       },
       {
         type: "input",
-        name: "officeNumber",
+        name: "school",
         message: "What school did the employee attend?",
       },
     ])
